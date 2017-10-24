@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         textViewData = (TextView)findViewById(R.id.textViewData);
         textViewData.setText("");
         getZipCode();
+
+//        String token = FirebaseInstanceId.getInstance().getToken();
+//        Log.d("token1", "Token: " + token);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
